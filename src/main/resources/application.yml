@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/test
+    driver-class-name: org.h2.Driver
+    username: sa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties.hibernate.hbm2ddl.auto: update
+    showSql: true
+  messages:
+    basename: i18n/exception
+    encoding: UTF-8
+  jwt:
+    secret: govlepel@$&
+
+  mvc:
+    throw-exception-if-no-handler-found: true
+
+logging:
+  level:
+    root: info
+    com.example.demo: debug
+    
