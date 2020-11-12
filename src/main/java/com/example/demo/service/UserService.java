@@ -17,6 +17,10 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    public User findByUserId(Long userId) {
+        return userRepository.findByUserId(userId);
+    }
+
     public User save() {
         User user = User.builder()
                 .uid("test" + System.currentTimeMillis() + "@gmail.com")
@@ -24,4 +28,5 @@ public class UserService {
                 .build();
         return userRepository.save(user);
     }
+
 }
