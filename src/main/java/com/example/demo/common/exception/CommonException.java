@@ -5,6 +5,11 @@ public class CommonException extends RuntimeException {
 
     private String code;
 
+    public CommonException() {
+        super("Server error");
+        this.code = "9000";
+    }
+
     public CommonException(String code, String message) {
         super(message);
         this.code = code;

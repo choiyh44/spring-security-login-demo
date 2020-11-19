@@ -5,7 +5,7 @@ spring:
     username: sa
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
-    properties.hibernate.hbm2ddl.auto: update
+    properties.hibernate.hbm2ddl.auto: none
     showSql: true
   messages:
     basename: i18n/exception
@@ -15,7 +15,14 @@ spring:
 
   mvc:
     throw-exception-if-no-handler-found: true
-
+  redis:
+    host: localhost
+    port: 6379 
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 2
 logging:
   level:
     root: info
