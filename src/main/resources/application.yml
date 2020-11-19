@@ -26,5 +26,5 @@ spring:
 logging:
   level:
     root: info
-    com.example.demo: debug
+    com.example.demo: info
     
